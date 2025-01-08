@@ -1,0 +1,54 @@
+/* Custom styles to complement Tailwind CSS */
+
+/* Ensure the page takes up at least the full viewport height */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Additional styles for the form inputs */
+input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+/* Custom styles for the submit button */
+button[type="submit"] {
+    transition: all 0.2s ease-in-out;
+}
+
+button[type="submit"]:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .flex {
+        flex-direction: column;
+    }
+
+    
+
+    .hidden.lg\:flex {
+        display: none;
+    }
+}
+
+/* Ensure the form is centered on smaller screens */
+@media (max-width: 640px) {
+    .w-full.lg\:w-1\/2 {
+        padding: 2rem;
+    }
+}
+
+/* Additional styles for new input fields */
+#phone-number, #confirm-password {
+    margin-top: 1rem;
+}
+
+/* Ensure consistent spacing between form elements */
+.space-y-4 > div:not(:first-child) {
+    margin-top: 1rem;
+}
